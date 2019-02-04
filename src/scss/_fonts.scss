@@ -1,0 +1,55 @@
+@font-face {
+  font-family: "Roboto";
+  src: url($fontsPath+"Roboto-Light.eot");
+  src: local("Roboto Light"), local("Roboto-Light"),
+    url($fontsPath+"Roboto-Light.eot?#iefix") format("embedded-opentype"),
+    url($fontsPath+"Roboto-Light.woff2") format("woff2"),
+    url($fontsPath+"Roboto-Light.woff") format("woff"),
+    url($fontsPath+"Roboto-Light.ttf") format("truetype"),
+    url($fontsPath+"Roboto-Light.svg#Roboto-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF UI  Text";
+  src: url($fontsPath+"SFUIText-Medium.eot");
+  src: local("SF UI  Text Medium"), local("SFUIText-Medium"),
+    url($fontsPath+"SFUIText-Medium.eot?#iefix") format("embedded-opentype"),
+    url($fontsPath+"SFUIText-Medium.woff2") format("woff2"),
+    url($fontsPath+"SFUIText-Medium.woff") format("woff"),
+    url($fontsPath+"SFUIText-Medium.ttf") format("truetype"),
+    url($fontsPath+"SFUIText-Medium.svg#SFUIText-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF UI  Text";
+  src: url($fontsPath+"SFUIText-Bold.eot");
+  src: local("SF UI  Text Bold"), local("SFUIText-Bold"),
+    url($fontsPath+"SFUIText-Bold.eot?#iefix") format("embedded-opentype"),
+    url($fontsPath+"SFUIText-Bold.woff2") format("woff2"),
+    url($fontsPath+"SFUIText-Bold.woff") format("woff"),
+    url($fontsPath+"SFUIText-Bold.ttf") format("truetype"),
+    url($fontsPath+"SFUIText-Bold.svg#SFUIText-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF UI  Text";
+  src: url($fontsPath+"SFUIText-Light.eot");
+  src: local("SF UI  Text Light"), local("SFUIText-Light"),
+    url($fontsPath+"SFUIText-Light.eot?#iefix") format("embedded-opentype"),
+    url($fontsPath+"SFUIText-Light.woff2") format("woff2"),
+    url($fontsPath+"SFUIText-Light.woff") format("woff"),
+    url($fontsPath+"SFUIText-Light.ttf") format("truetype"),
+    url($fontsPath+"SFUIText-Light.svg#SFUIText-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}

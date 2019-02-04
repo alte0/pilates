@@ -1,0 +1,32 @@
+#fp-nav {
+  transform: translateY(-50%);
+
+  &.fp-right {
+    margin-top: 0 !important;
+    right: 43px;
+  }
+
+  & ul li {
+    width: 5px;
+    height: 5px;
+    margin: 18px 7.5px;
+    &:first-child {
+      display: none;
+    }
+  }
+
+  & ul li a {
+    &.active span {
+      width: 5px;
+      height: 5px;
+      margin: -2px 0 0 -2px;
+    }
+
+    & span {
+      width: 5px;
+      height: 5px;
+      background-color: $dotsColor
+    }
+  }
+}
+
