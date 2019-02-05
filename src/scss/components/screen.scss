@@ -1,0 +1,6 @@
+.screen {
+  &:last-child {
+    display: flex;
+    flex-direction: column;
+  }
+}

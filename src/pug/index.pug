@@ -3,6 +3,7 @@ extends template-pug/layout
 block head
   - var pageTitle = 'Студия Пилатеса';
 block header
+
 block content
   main(id='full-page')
     .section.screen(data-tooltip="") Определённый раздел 1
@@ -18,5 +19,10 @@ block content
       p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum excepturi ea a sint nulla, tenetur iusto fugit provident natus ipsa maiores, consequuntur soluta quis cumque omnis tempora. Officia, modi aliquam.Quae quas soluta et alias quibusdam cupiditate tempore hic neque modi? Eaque officia incidunt maxime, laudantium ullam iure, aperiam molestias earum, voluptas accusamus alias? Atque cum ipsa quaerat maiores dolore.Provident exercitationem aliquid animi temporibus officia, tenetur dicta obcaecati iste perferendis qui velit. Quas nemo sequi veniam sit molestiae ducimus iusto! Corporis voluptas quia doloremque perferendis accusantium aliquam nisi fugiat.
       p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum excepturi ea a sint nulla, tenetur iusto fugit provident natus ipsa maiores, consequuntur soluta quis cumque omnis tempora. Officia, modi aliquam.Quae quas soluta et alias quibusdam cupiditate tempore hic neque modi? Eaque officia incidunt maxime, laudantium ullam iure, aperiam molestias earum, voluptas accusamus alias? Atque cum ipsa quaerat maiores dolore.Provident exercitationem aliquid animi temporibus officia, tenetur dicta obcaecati iste perferendis qui velit. Quas nemo sequi veniam sit molestiae ducimus iusto! Corporis voluptas quia doloremque perferendis accusantium aliquam nisi fugiat.
     .section.screen(data-tooltip=menu[3]) Определённый раздел 5 #{menu[3]}
-    .section.screen(data-tooltip=menu[4]) Определённый раздел 6 #{menu[4]}
+    .section.screen(data-tooltip=menu[4])
+      .container
+        h3 #{menu[4]}
+      block footer
+        include template-pug/footer
+
 block footer

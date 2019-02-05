@@ -1,0 +1,31 @@
+.svg-icon {
+  fill: white;
+  transition: fill linear 0.3s;
+  &:hover {
+    fill: rgba(0, 0, 0, 0.5);
+  }
+}
+.vk {
+  width: 25px;
+  height: 14px;
+  @media screen and (max-width: $desktop-down) {
+    width: 20px;
+    height: 11px;
+  }
+}
+.fb {
+  width: 10px;
+  height: 20px;
+  @media screen and (max-width: $desktop-down) {
+    width: 8px;
+    height: 15px;
+  }
+}
+.ins {
+  width: 17px;
+  height: 17px;
+  @media screen and (max-width: $desktop-down) {
+    width: 13px;
+    height: 13px;
+  }
+}

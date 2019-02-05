@@ -1,5 +1,13 @@
+$tablet: 764px;
+$tablet-down: $tablet - 1px;
+$desktop: 1366px;
+$desktop-down: $desktop - 1px;
+
 $robotoFont: 'Roboto', sans-serif;
 $sfuiFont: 'SF UI  Text', sans-serif;
 
 $dotsColor: #bfbfbf;
 $dotsLineColor: #7f7f7f;
+
+$green: #91aa59;
+$collorTextWhite: #fefefe;

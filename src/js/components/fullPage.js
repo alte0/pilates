@@ -11,17 +11,10 @@ const createSpan = () => {
 Fullpage('#full-page', {
   licenseKey: 'YOUR_KEY_HERE',
   anchors: ['screen1', 'screen2', 'screen3', 'screen4', 'screen5', 'screen6'],
-  //   menu: '#mainmenu',
   navigation: true,
-//   sectionsColor: [
-//     '#ff5f45',
-//     '#0798ec',
-//     '#fc6c7c',
-//     'grey',
-//     '#0798ec',
-//     '#fc6c7c'
-//   ],
   verticalCentered: false,
+  keyboardScrolling: false,
+  scrollBar: true,
   afterLoad: function (origin, destination) {
     let numberEl = document.querySelector(`.number-screen`)
 

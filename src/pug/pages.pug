@@ -4,6 +4,6 @@ block head
   - var pageTitle = 'All pages';
 block content
   ul
-  each item in [{href: 'index', title: 'Главная'} 'Главная 2'}]
+  each item in [{href: 'index', title: 'Главная'}]
     li
       a(href=item.href + '.html', target="_blank") #{item.title}

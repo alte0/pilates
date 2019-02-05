@@ -1,1 +1,22 @@
+- var lists = ["Вконтакте", "Фейсбук", "Инстаграмм"]
+
 footer.footer
+  +b.row_footer._middle(class="container")
+    +logo()
+    +b.UL.social-links
+      +e.LI.item: +e.A.link(href="#", target="_blank", title=lists[0])
+        +vis-hid(lists[0])
+        svg.svg-icon.vk(width="25" height="14" focusable="false" aria-hidden="true")
+          use(xlink:href='svg/symbols.svg#vk')
+
+      +e.LI.item: +e.A.link(href="#", target="_blank", title=lists[1])
+        +vis-hid(lists[1])
+        svg.svg-icon.fb(width="10" height="20" focusable="false" aria-hidden="true")
+          use(xlink:href='svg/symbols.svg#fb')
+
+      +e.LI.item: +e.A.link(href="#", target="_blank", title=lists[2])
+        +vis-hid(lists[2])
+        svg.svg-icon.ins(width="17" height="17" focusable="false" aria-hidden="true")
+          use(xlink:href='svg/symbols.svg#ins')
+
+    span.copyright Pilates Plus, 2017 &copy;

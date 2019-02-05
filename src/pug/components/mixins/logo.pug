@@ -1,0 +1,9 @@
+mixin logo()
+  +b.PICTURE.logo
+    source(media="(min-width: 1366px)", srcset="images/logo/logo-desktop.png")
+    +e.IMG.img(
+      src="images/logo/logo.png"
+      alt="Студия Пилатеса"
+      )
+    +e.FIGCAPTION.text Pilates+
+
