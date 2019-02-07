@@ -16,16 +16,22 @@ Fullpage('#full-page', {
   keyboardScrolling: false,
   scrollBar: true,
   afterLoad: function (origin, destination) {
+    const fpNav = document.querySelector(`#fp-nav`)
     let numberEl = document.querySelector(`.number-screen`)
+    let index = destination.index + 1
 
     if (!numberEl) {
       createSpan()
       numberEl = document.querySelector(`.number-screen`)
     }
 
-    if (destination.index !== null) {
-      let index = destination.index + 1
+    if (index === 4 || index === 6) {
+      fpNav.classList.add(`hide`)
+    } else {
+      fpNav.classList.remove(`hide`)
+    }
 
+    if (index !== null) {
       if (index < 10) {
         index = `0${index}`
       }
