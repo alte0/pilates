@@ -22,7 +22,8 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "fullpage.js": "^3.0.4"
+    "fullpage.js": "^3.0.4",
+    "smooth-scroll": "^15.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",

@@ -2,7 +2,7 @@ import Fullpage from 'fullpage.js'
 
 const settingFullpage = {
   licenseKey: 'YOUR_KEY_HERE',
-  anchors: ['screen1', 'screen2', 'screen3', 'screen4', 'screen5', 'screen6'],
+  anchors: ['screen-1', 'screen-2', 'screen-3', 'screen-4', 'screen-5', 'screen-6'],
   navigation: true,
   verticalCentered: false,
   keyboardScrolling: false,
@@ -45,7 +45,9 @@ const createSpan = () => {
 }
 
 const workFullPage = () => {
-  let isEnableFullpage = document.documentElement.classList.contains(`fp-enabled`)
+  let isEnableFullpage = document.documentElement.classList.contains(
+    `fp-enabled`
+  )
 
   if (getWidthWindow() >= 1366 && !isEnableFullpage) {
     console.info(`init fullpage`)
