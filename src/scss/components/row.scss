@@ -1,13 +1,15 @@
 .row {
   display: flex;
   flex-direction: row;
+  margin-left: -$ml;
+  margin-right: -$mr;
   &_wrap {
     flex-wrap: wrap;
   }
   &_space-between {
     justify-content: space-between;
   }
-  &_column{
+  &_column {
     flex-direction: column;
   }
   &_middle {
@@ -18,17 +20,16 @@
   }
   &_footer {
     flex-direction: column;
-    justify-content: space-between;
-    padding-left: 15px;
-    padding-right: 15px;
+    @media screen and (min-width: $tablet) and (max-width: $desktop-down) {
+      margin-left: -42px;
+      margin-right: -42px;
+    }
     @media screen and (min-width: $tablet) {
       flex-direction: row;
-      padding-left: 20px;
-      padding-right: 20px;
     }
     @media screen and (min-width: $desktop) {
-      padding-left: 100px;
-      padding-right: 100px;
+      margin-left: 0;
+      margin-right: 0;
     }
   }
 }
