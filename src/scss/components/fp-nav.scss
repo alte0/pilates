@@ -1,5 +1,6 @@
 #fp-nav {
   transform: translateY(-50%);
+  transition: opacity linear 0.15s;
 
   &.fp-right {
     margin-top: 0 !important;

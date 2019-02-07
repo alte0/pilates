@@ -26,9 +26,11 @@ Fullpage('#full-page', {
     }
 
     if (index === 4 || index === 6) {
-      fpNav.classList.add(`hide`)
+        fpNav.style.opacity = `0`
+        // fpNav.classList.add(`hide`)
     } else {
-      fpNav.classList.remove(`hide`)
+        // fpNav.classList.remove(`hide`)
+        fpNav.style.opacity = `1`
     }
 
     if (index !== null) {
