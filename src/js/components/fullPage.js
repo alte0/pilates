@@ -1,14 +1,6 @@
 import Fullpage from 'fullpage.js'
 
-const createSpan = () => {
-  const span = document.createElement(`span`)
-  span.classList.add(`number-screen`)
-
-  const fpNav = document.querySelector(`#fp-nav`)
-  fpNav.insertBefore(span, fpNav.children[0])
-}
-
-Fullpage('#full-page', {
+const settingFullpage = {
   licenseKey: 'YOUR_KEY_HERE',
   anchors: ['screen1', 'screen2', 'screen3', 'screen4', 'screen5', 'screen6'],
   navigation: true,
@@ -40,4 +32,32 @@ Fullpage('#full-page', {
       numberEl.textContent = index
     }
   }
-})
+}
+
+const getWidthWindow = () => document.documentElement.clientWidth
+
+const createSpan = () => {
+  const span = document.createElement(`span`)
+  span.classList.add(`number-screen`)
+
+  const fpNav = document.querySelector(`#fp-nav`)
+  fpNav.insertBefore(span, fpNav.children[0])
+}
+
+const workFullPage = () => {
+  let isEnableFullpage = document.documentElement.classList.contains(`fp-enabled`)
+
+  if (getWidthWindow() >= 1366 && !isEnableFullpage) {
+    console.info(`init fullpage`)
+    Fullpage('#full-page', settingFullpage)
+  } else if (getWidthWindow() < 1366 && isEnableFullpage) {
+    console.info(`destroy fullpage`)
+    // eslint-disable-next-line
+    fullpage_api.destroy('all')
+  }
+}
+
+const initFullpage = workFullPage
+initFullpage()
+
+window.addEventListener(`resize`, workFullPage)
