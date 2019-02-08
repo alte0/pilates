@@ -13,6 +13,20 @@
 }
 
 @font-face {
+  font-family: "Roboto";
+  src: url($fontsPath+"Roboto-Medium.eot");
+  src: local("Roboto Medium"), local("Roboto-Medium"),
+    url($fontsPath+"Roboto-Medium.eot?#iefix") format("embedded-opentype"),
+    url($fontsPath+"Roboto-Medium.woff2") format("woff2"),
+    url($fontsPath+"Roboto-Medium.woff") format("woff"),
+    url($fontsPath+"Roboto-Medium.ttf") format("truetype"),
+    url($fontsPath+"Roboto-Medium.svg#Roboto-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "SF UI  Text";
   src: url($fontsPath+"SFUIText-Medium.eot");
   src: local("SF UI  Text Medium"), local("SFUIText-Medium"),

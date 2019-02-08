@@ -1,4 +1,44 @@
 .section {
+  &__title {
+    font-size: 18px;
+    line-height: 1;
+    margin-left: 25px;
+    position: relative;
+    font-family: $robotoFont;
+    font-weight: 500;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      left: -25px;
+      width: 17px;
+      height: 1px;
+      background-color: $black
+    }
+    @media screen and (min-width: $tablet) {
+      font-size: 24px;
+      line-height: 1;
+      margin-left: 56px;
+      margin-bottom: 29px;
+      &::before {
+        left: -56px;
+        width: 37px;
+        height: 2px;
+      }
+    }
+    @media screen and (min-width: $desktop) {
+      font-size: 48px;
+      line-height: 1;
+      margin-left: 57px;
+      margin-top: 8px;
+      margin-bottom: 62px;
+      &::before {
+        left: -57px;
+      }
+    }
+  }
   &:last-child {
     display: flex;
     flex-direction: column;

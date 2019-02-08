@@ -5,6 +5,7 @@
   padding-right: $mr;
   width: 100%;
   box-sizing: border-box;
+  position: relative;
   @media screen and (min-width: $tablet) {
     max-width: $tablet;
     padding-left: 62px;

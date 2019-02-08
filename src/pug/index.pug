@@ -6,22 +6,39 @@ block header
 
 block content
   main(id='full-page')
-    .section.screen(data-tooltip="") Определённый раздел 1
+    section.section(data-tooltip="") Определённый раздел 1
       - var menu = ["О пилатесе", "Расписание и стоимость", "Как прохоят занятия", "Отзывы", "Контакты"]
       ul#mainmenu
         each text, index in menu
           li(data-menuanchor='screen'+(index+2))
             a(href='#screen'+(index+2) title=text)= text
 
-    #screen2.section(data-tooltip=menu[0]) Определённый раздел 2 #{menu[0]}
-    #screen3.section(data-tooltip=menu[1]) Определённый раздел 3 #{menu[1]}
-    #screen4.section.fp-auto-height(data-tooltip=menu[2]) Определённый раздел 4 #{menu[2]}
-      p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum excepturi ea a sint nulla, tenetur iusto fugit provident natus ipsa maiores, consequuntur soluta quis cumque omnis tempora. Officia, modi aliquam.Quae quas soluta et alias quibusdam cupiditate tempore hic neque modi? Eaque officia incidunt maxime, laudantium ullam iure, aperiam molestias earum, voluptas accusamus alias? Atque cum ipsa quaerat maiores dolore.Provident exercitationem aliquid animi temporibus officia, tenetur dicta obcaecati iste perferendis qui velit. Quas nemo sequi veniam sit molestiae ducimus iusto! Corporis voluptas quia doloremque perferendis accusantium aliquam nisi fugiat.
-      p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum excepturi ea a sint nulla, tenetur iusto fugit provident natus ipsa maiores, consequuntur soluta quis cumque omnis tempora. Officia, modi aliquam.Quae quas soluta et alias quibusdam cupiditate tempore hic neque modi? Eaque officia incidunt maxime, laudantium ullam iure, aperiam molestias earum, voluptas accusamus alias? Atque cum ipsa quaerat maiores dolore.Provident exercitationem aliquid animi temporibus officia, tenetur dicta obcaecati iste perferendis qui velit. Quas nemo sequi veniam sit molestiae ducimus iusto! Corporis voluptas quia doloremque perferendis accusantium aliquam nisi fugiat.
-    #screen5.section(data-tooltip=menu[3]) Определённый раздел 5 #{menu[3]}
-    #screen6.section(data-tooltip=menu[4])
+    +b#screen2.SECTION.section(data-tooltip=menu[0])
       .container
-        h3 #{menu[4]}
+        +title-section(menu[0])
+        include components/sections/section-2
+
+
+    +b#screen3.SECTION.section(data-tooltip=menu[1])
+      .container
+        +title-section(menu[1])
+        include components/sections/section-2
+
+    +b#screen4.SECTION.section.fp-auto-height(data-tooltip=menu[2])
+      .container
+        +title-section(menu[2])
+        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum excepturi ea a sint nulla, tenetur iusto fugit provident natus ipsa maiores, consequuntur soluta quis cumque omnis tempora. Officia, modi aliquam.Quae quas soluta et alias quibusdam cupiditate tempore hic neque modi? Eaque officia incidunt maxime, laudantium ullam iure, aperiam molestias earum, voluptas accusamus alias? Atque cum ipsa quaerat maiores dolore.Provident exercitationem aliquid animi temporibus officia, tenetur dicta obcaecati iste perferendis qui velit. Quas nemo sequi veniam sit molestiae ducimus iusto! Corporis voluptas quia doloremque perferendis accusantium aliquam nisi fugiat.
+        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum excepturi ea a sint nulla, tenetur iusto fugit provident natus ipsa maiores, consequuntur soluta quis cumque omnis tempora. Officia, modi aliquam.Quae quas soluta et alias quibusdam cupiditate tempore hic neque modi? Eaque officia incidunt maxime, laudantium ullam iure, aperiam molestias earum, voluptas accusamus alias? Atque cum ipsa quaerat maiores dolore.Provident exercitationem aliquid animi temporibus officia, tenetur dicta obcaecati iste perferendis qui velit. Quas nemo sequi veniam sit molestiae ducimus iusto! Corporis voluptas quia doloremque perferendis accusantium aliquam nisi fugiat.
+    +b#screen5.SECTION.section(data-tooltip=menu[3])
+      .container
+        +title-section(menu[3])
+        include components/sections/section-2
+
+    +b#screen6.SECTION.section(data-tooltip=menu[4])
+      .container
+        +title-section(menu[4])
+        include components/sections/section-6
+      include components/map
       block footer
         include template-pug/footer
 

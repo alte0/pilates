@@ -1,0 +1,51 @@
+.contacts-box {
+  padding: 7px 21px 47px 21px;
+  &__title {
+    font-size: 16px;
+    line-height: 22px;
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+  &__address {
+    font-style: normal;
+    font-weight: 300;
+    margin-bottom: 21px;
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 36px;
+    }
+    @media screen and (min-width: $desktop) {
+      line-height: 1.45;
+      margin-bottom: 20px;
+    }
+  }
+  &__tel,
+  &__mail {
+    color: inherit;
+    font-weight: 300;
+  }
+  &__tel {
+    text-decoration: none;
+    margin-bottom: 13px;
+    display: inline-block;
+    &:hover {
+      text-decoration: underline;
+    }
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 31px;
+    }
+  }
+  // &__mail {}
+  @media screen and (min-width: $tablet) {
+    color: $whiteContacts;
+    background-color: $green;
+    position: absolute;
+    transform: translateX(-13px);
+    padding: 25px 40px 35px 37px;
+    box-shadow: $shadowBox;
+  }
+  @media screen and (min-width: $desktop) {
+    transform: none;
+    padding: 60px 71px 78px 68px;
+  }
+}
+

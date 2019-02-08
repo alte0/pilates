@@ -3,10 +3,10 @@
   color: $collorTextWhite;
   padding-top: 39px;
   padding-bottom: 4px;
-  margin-top: auto;
+  z-index: 1;
   @media screen and (min-width: $tablet) {
     padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 14px;
   }
   @media screen and (min-width: $desktop) {
     padding-top: 39px;

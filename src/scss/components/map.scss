@@ -1,0 +1,10 @@
+.map {
+  height: 272px;
+  @media screen and (min-width: $tablet) {
+    height: 355px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 100%;
+    flex-grow: 1;
+  }
+}
