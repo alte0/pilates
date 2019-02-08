@@ -34,7 +34,7 @@ const settingFullpage = {
   }
 }
 
-const getWidthWindow = () => document.documentElement.clientWidth
+const getWidthWindow = () => window.innerWidth
 
 const createSpan = () => {
   const span = document.createElement(`span`)
@@ -48,7 +48,7 @@ const workFullPage = () => {
   let isEnableFullpage = document.documentElement.classList.contains(
     `fp-enabled`
   )
-
+    console.log(getWidthWindow())
   if (getWidthWindow() >= 1366 && !isEnableFullpage) {
     console.info(`init fullpage`)
     Fullpage('#full-page', settingFullpage)
