@@ -48,12 +48,10 @@ const workFullPage = () => {
   let isEnableFullpage = document.documentElement.classList.contains(
     `fp-enabled`
   )
-    console.log(getWidthWindow())
+
   if (getWidthWindow() >= 1366 && !isEnableFullpage) {
-    console.info(`init fullpage`)
     Fullpage('#full-page', settingFullpage)
   } else if (getWidthWindow() < 1366 && isEnableFullpage) {
-    console.info(`destroy fullpage`)
     // eslint-disable-next-line
     fullpage_api.destroy('all')
   }
