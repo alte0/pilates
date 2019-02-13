@@ -12,11 +12,13 @@ $minify: false !default;
   $fontsPath: "./fonts/";
 }
 
+@import "../../node_modules/normalize.css/normalize";
 @import "variables";
 @import "fonts";
 @import "common";
 // @import "sprite/sprite.scss";
-// @import "sprite/spriteSvg.scss";
+@import "sprite/spriteSvg.scss";
 @import "../../node_modules/fullpage.js/dist/fullpage";
+@import "../../node_modules/swiper/dist/css/swiper";
 @import "components/**/*";
 // @import "../../node_modules/slick-carousel/slick/slick.scss";

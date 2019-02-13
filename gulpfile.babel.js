@@ -20,7 +20,7 @@ task('watch', function (done) {
     watch([path.watch.css], series('sass'))
     watch([path.watch.sprites], series('sprites'))
     watch([path.watch.spritesSvg], series('spritesSVG'))
-    watch([path.watch.spritesSymbolSvg], series('spritesSymbolsSVG'))
+    watch([path.watch.symbolsSvg], series('symbolsSVG'))
     watch([path.watch.fonts], function () {
       browserSync.reload()
     })
@@ -52,7 +52,7 @@ task(
   series(
     'clean-all',
     'isNoBs',
-    parallel('sprites', 'spritesSVG', 'spritesSymbolsSVG'),
+    parallel('sprites', 'spritesSVG', 'symbolsSVG'),
     parallel('sass', 'images', 'i', 'fonts', 'js:prod'),
     'pug',
     'watch'
@@ -64,7 +64,7 @@ task(
   'dev',
   series(
     'clean-all',
-    parallel('sprites', 'spritesSVG', 'spritesSymbolsSVG'),
+    parallel('sprites', 'spritesSVG', 'symbolsSVG'),
     parallel('sass', 'pug', 'watch', 'browser-sync')
   )
 )
@@ -79,7 +79,7 @@ task(
     'clean-all',
     'isNoBs',
     'isNoWatch',
-    parallel('sprites', 'spritesSVG', 'spritesSymbolsSVG'),
+    parallel('sprites', 'spritesSVG', 'symbolsSVG'),
     parallel('sass', 'images', 'i', 'fonts', 'js:prod'),
     'pug',
     'zipArchive'

@@ -1,9 +1,15 @@
 .svg-icon {
-  fill: white;
   transition: fill linear 0.3s;
+  fill: rgba(0, 0, 0, 0.5);
   &:hover {
-    fill: rgba(0, 0, 0, 0.5);
+    fill: rgba(0, 0, 0, 1);
   }
+  // &_white {
+  //   fill: white;
+  //   &:hover {
+  //     fill: rgba(0, 0, 0, 0.5);
+  //   }
+  // }
 }
 .vk {
   width: 25px;

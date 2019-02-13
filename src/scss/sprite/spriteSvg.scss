@@ -1,20 +1,46 @@
 .icon {
     font-size: 10px;
+    &:before {
+      content:' ';
+      vertical-align:middle;
+      display: inline-block;
+      background-image: url("../images/sprite/sprite.svg");
+      background-repeat: no-repeat;
+      background-size: 4.3em 11.7em;
+
+      .no-svg & {
+        background-image: url("../images/sprite/sprite.png");
+      }
+    }
 }
 
-.icon:before {
-    content:' ';
-    vertical-align:middle;
-    display: inline-block;
-    background-image: url("../images/sprite/sprite.svg");
-    background-repeat: no-repeat;
-    background-size: 0em 0em;
-}
 
-.no-svg .icon:before {
-    background-image: url("../images/sprite/sprite.png");
-}
 
+
+.icon.arrow-next {
+  &:before {
+      background-position: -1em -1em;
+      width: 2.2409999999999997em;
+      height: 3.7969999999999997em;
+    }
+  }
+
+  @mixin icon-arrow-next(){
+    @extend .arrow-next;
+  }
+
+
+.icon.arrow-prev {
+  &:before {
+      background-position: -1em -6.8em;
+      width: 2.3em;
+      height: 3.9em;
+    }
+  }
+
+  @mixin icon-arrow-prev(){
+    @extend .arrow-prev;
+  }
 
 
 

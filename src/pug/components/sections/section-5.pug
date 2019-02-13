@@ -1,0 +1,75 @@
++b.slider(class="swiper-container")
+  +e.inner-wrapper(class="swiper-wrapper")
+      +e.item(class="swiper-slide")
+        +b.review
+          +e.left-cell
+            +e.IMG.photo(src="i/photo-1.jpg", alt="Фото Вероники Кулешовой", height="178", width="185")
+          +e.right-cell
+            +e.H3.first-last-name Вероника Кулешова
+            +e.about-user
+              span 25 лет
+              - var lists = ["Вконтакте", "Инстаграмм"]
+              +b.UL.social-links
+                +e.LI.item: +e.A.link(href="#", target="_blank", title=lists[0])
+                  +vis-hid(lists[0])
+                  svg.svg-icon.vk.vk_black(width="25" height="14" focusable="false" aria-hidden="true")
+                    use(xlink:href='symbol-svg/svg-symbols.svg#vk')
+                +e.LI.item: +e.A.link(href="#", target="_blank", title=lists[1])
+                  +vis-hid(lists[1])
+                  svg.svg-icon.ins(width="17" height="17" focusable="false" aria-hidden="true")
+                    use(xlink:href='symbol-svg/svg-symbols.svg#ins')
+
+            +e.P.comment Хожу на пилатес уже пять месяцев. После десяти занятий уже увидела результат: тело подтянулось, улучшилась осанка, появился пресс. И самое главное, пропал сильный изгиб поясничного отдела, который меня очень беспокоил.
+
+      +e.item(class="swiper-slide")
+        +b.review
+          +e.left-cell
+            +e.IMG.photo(src="i/photo-2.jpg", alt="Фото Елизавета Смирнова", height="178", width="185")
+          +e.right-cell
+            +e.H3.first-last-name Елизавета Смирнова
+            +e.about-user
+              span 29 лет
+              - var lists = ["Вконтакте", "Инстаграмм"]
+              +b.UL.social-links
+                +e.LI.item: +e.A.link(href="#", target="_blank", title=lists[0])
+                  +vis-hid(lists[0])
+                  svg.svg-icon.vk.vk_black(width="25" height="14" focusable="false" aria-hidden="true")
+                    use(xlink:href='symbol-svg/svg-symbols.svg#vk')
+                +e.LI.item: +e.A.link(href="#", target="_blank", title=lists[1])
+                  +vis-hid(lists[1])
+                  svg.svg-icon.ins(width="17" height="17" focusable="false" aria-hidden="true")
+                    use(xlink:href='symbol-svg/svg-symbols.svg#ins')
+
+            +e.P.comment Очень нравятся занятия, хожу уже пять месяцев. На занятиях делаем много упражнений на пресс, бедра и спину. Мышци подтянулись, появился рельеф и хорошее настроение :)
+
+      +e.item(class="swiper-slide")
+        +b.review
+          +e.left-cell
+            +e.IMG.photo(src="i/photo-3.jpg", alt="Фото Елизавета Смирнова", height="178", width="185")
+          +e.right-cell
+            +e.H3.first-last-name Кристина Егорова
+            +e.about-user
+              span 23 лет
+              - var lists = ["Вконтакте", "Инстаграмм"]
+              +b.UL.social-links
+                +e.LI.item: +e.A.link(href="#", target="_blank", title=lists[0])
+                  +vis-hid(lists[0])
+                  svg.svg-icon.vk.vk_black(width="25" height="14" focusable="false" aria-hidden="true")
+                    use(xlink:href='symbol-svg/svg-symbols.svg#vk')
+                +e.LI.item: +e.A.link(href="#", target="_blank", title=lists[1])
+                  +vis-hid(lists[1])
+                  svg.svg-icon.ins(width="17" height="17" focusable="false" aria-hidden="true")
+                    use(xlink:href='symbol-svg/svg-symbols.svg#ins')
+
+            +e.P.comment Рекомендую заниматься всем! У меня сколиоз и спина часто болит после рабочего дня. После занятий появилась лекость в мышцах и свобода движений. Приходите!
+
+
+
+  +e.pagination(class="swiper-pagination")
+
+  +e.button-prev(class="swiper-button-prev")
+  +e.button-next(class="swiper-button-next")
+
+.pagination-slider-external
+
+//- <img data-src="http://lorempixel.com/1600/1200/nature/2/" class="swiper-lazy">

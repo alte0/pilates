@@ -9,15 +9,16 @@ import browserSync from 'browser-sync'
 import pug from 'gulp-pug'
 import webpack from 'webpack'
 import webpackDevMiddleware from 'webpack-dev-middleware'
+import webpackHotMiddleware from 'webpack-hot-middleware'
 import favicon from 'serve-favicon'
 import express from 'express'
 
 const app = express()
 let listener, port
+let compiler = webpack(config)
 
 const initBrowserSync = function () {
   return browserSync.init({
-    // watch: true,
     // Customize the Browsersync console logging prefix
     logPrefix: 'SBP',
     // Sync viewports to TOP position
@@ -25,16 +26,22 @@ const initBrowserSync = function () {
     // Открывать страницу в браузере по умолчанию
     open: true,
     // true включать изменения, false перезагрузка страницы
-    injectChanges: false,
+    // injectChanges: false,
+    injectChanges: true,
     // watch files ["app/css/style.css", "app/js/*.js"]
+    // files: [
+    //   './dist',
+    //   './src/pug/**/*',
+    //   './src/js/**/*',
+    //   './src/fonts',
+    //   './src/i',
+    //   './src/images'
+    // ],
     files: [
       './dist',
       './src/pug/**/*',
-      './src/js/**/*.js'
+      './src/js/**/*'
     ],
-    // './src/fonts/**/*'
-    // './src/i/**/*.*',
-    // './src/images/**/*.*'
     // Wait for 1 seconds before any browsers should try to inject/reload a file.
     // reloadDelay: 1000,
     // proxy на локальный сервер Express
@@ -71,15 +78,19 @@ task('pug', function (done) {
     app.use('/images', express.static('src/images'))
     app.use('/images/sprite', express.static('dist/images/sprite'))
     app.use('/js', express.static('dist/js'))
-    app.use('/svg', express.static('dist/svg'))
+    app.use('/symbol-svg', express.static('dist/symbol-svg'))
     // Tell express to use the webpack-dev-middleware and use the webpack.config.js
     // configuration file as a base.
     // const config = require('../../dev.webpack.config.js')
-    app.use(
-      webpackDevMiddleware(webpack(config), {
-        publicPath: config.output.publicPath
-      })
-    )
+    // app.use(
+    //   webpackDevMiddleware(webpack(config), {
+    //     publicPath: config.output.publicPath
+    //   })
+    // )
+    app.use(webpackDevMiddleware(compiler, {
+      noInfo: true, publicPath: config.output.publicPath
+    }))
+    app.use(webpackHotMiddleware(compiler))
     app.use(favicon('src/favicon/index.ico'))
     // роутинг на наши страницы
     app.get('/*.*', function (req, res) {

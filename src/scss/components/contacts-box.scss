@@ -8,7 +8,6 @@
   }
   &__address {
     font-style: normal;
-    font-weight: 300;
     margin-bottom: 21px;
     @media screen and (min-width: $tablet) {
       margin-bottom: 36px;
@@ -34,7 +33,6 @@
       margin-bottom: 31px;
     }
   }
-  // &__mail {}
   @media screen and (min-width: $tablet) {
     color: $whiteContacts;
     background-color: $green;
