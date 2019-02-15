@@ -17,9 +17,16 @@ var mySwiper = new Swiper('.swiper-container', {
   // Responsive breakpoints
   breakpointsInverse: true,
   breakpoints: {
-    // when window width is >= 640px
+    // when window width is >= 764
     764: {
       slidesPerView: 'auto',
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      }
+    },
+    1366: {
+      slidesPerView: 1,
       pagination: {
         el: '.swiper-pagination',
         clickable: true

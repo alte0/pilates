@@ -41,6 +41,20 @@
 }
 
 @font-face {
+  font-family: 'Roboto';
+  src: url($fontsPath+'Roboto-Bold.eot');
+  src: local('Roboto Bold'), local('Roboto-Bold'),
+      url($fontsPath+'Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+      url($fontsPath+'Roboto-Bold.woff2') format('woff2'),
+      url($fontsPath+'Roboto-Bold.woff') format('woff'),
+      url($fontsPath+'Roboto-Bold.ttf') format('truetype'),
+      url($fontsPath+'Roboto-Bold.svg#Roboto-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "SF UI  Text";
   src: url($fontsPath+"SFUIText-Medium.eot");
   src: local("SF UI  Text Medium"), local("SFUIText-Medium"),

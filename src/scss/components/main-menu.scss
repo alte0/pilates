@@ -1,0 +1,33 @@
+.main-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 34px;
+      @media screen and (min-width: $tablet) {
+        margin-bottom: 51px;
+      }
+      @media screen and (min-width: $tablet) {
+        margin-bottom: 54px;
+      }
+    }
+  }
+  &__link {
+    color: white;
+    font-size: 18px;
+    line-height: 44px;
+    font-family: $robotoFont;
+    font-weight: bold;
+    @media screen and (min-width: $tablet) {
+      font-size: 36px;
+      line-height: 60px;
+    }
+    @media screen and (min-width: $desktop) {
+      font-size: 48px;
+    }
+    &:not(:hover) {
+      text-decoration: none;
+    }
+  }
+}

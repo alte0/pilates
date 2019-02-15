@@ -5,13 +5,36 @@ block head
 block header
 
 block content
+  - var menu = ["О пилатесе", "Расписание и стоимость", "Как прохоят занятия", "Отзывы", "Контакты"]
+
   main(id='full-page')
-    section.section(data-tooltip="") Определённый раздел 1
-      - var menu = ["О пилатесе", "Расписание и стоимость", "Как прохоят занятия", "Отзывы", "Контакты"]
-      ul#mainmenu
-        each text, index in menu
-          li(data-menuanchor='screen'+(index+2))
-            a(href='#screen'+(index+2) title=text)= text
+    section.section(data-tooltip="")
+      .container
+        +b.HEADER.header
+          +logo()
+          +e.BUTTON.nav-toggler
+            +vis-hid("Открыть меню")
+            svg.svg-icon.toggler-icon(width="25" height="18" focusable="false" aria-hidden="true")
+              use(xlink:href='symbol-svg/svg-symbols.svg#toggler-icon')
+
+          +e.A.tel(href="tel:+79183650607") +7 918 365 06 07
+
+        +b.description
+          +e.H1.title Студия <br/> Пилатеса
+          +e.P.slogan Твоё здоровое тело через 10 занятий
+          +e.A.to-see-schedule(href="#screen3") Смотреть расписание
+
+        +b.PICTURE.girls
+          source(media="(min-width: 1366px)", srcset="images/girl-desktop.png")
+          source(media="(min-width: 764px)", srcset="images/girl-tablet.png")
+          +e.IMG.img(src="images/girl.png" alt="Девушка")
+
+      +b.NAV.nav
+        +e.SPAN.close(aria-label="Закрыть меню")
+        +b.UL.main-menu
+          each text, index in menu
+            +e.LI.item
+              +e.A.link(href='#screen'+(index+2) title=text)= text
 
     +b#screen2.SECTION.section(data-tooltip=menu[0])
       .container

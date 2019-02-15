@@ -4,12 +4,7 @@
   &:hover {
     fill: rgba(0, 0, 0, 1);
   }
-  // &_white {
-  //   fill: white;
-  //   &:hover {
-  //     fill: rgba(0, 0, 0, 0.5);
-  //   }
-  // }
+
 }
 .vk {
   width: 25px;
@@ -33,5 +28,14 @@
   @media screen and (max-width: $desktop-down) {
     width: 13px;
     height: 13px;
+  }
+}
+
+.toggler-icon {
+  width: 25px;
+  height: 18px;
+  @media screen and (max-width: $tablet-down) {
+    width: 17px;
+    height: 12px;
   }
 }
