@@ -6,6 +6,7 @@ block header
 
 block content
   - var menu = ["О пилатесе", "Расписание и стоимость", "Как прохоят занятия", "Отзывы", "Контакты"]
+  meta(name='author' content='Студия Пилатеса')
 
   main(id='full-page')
     section.section(data-tooltip="")
@@ -30,7 +31,7 @@ block content
           +e.IMG.img(src="images/girl.png" alt="Девушка")
 
       +b.NAV.nav
-        +e.SPAN.close(aria-label="Закрыть меню")
+        +e.BUTTON.close(aria-label="Закрыть меню")
         +b.UL.main-menu
           each text, index in menu
             +e.LI.item
