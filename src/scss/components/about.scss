@@ -1,0 +1,22 @@
+.about {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-direction: row;
+  }
+  &__left-cell {
+    @media screen and (min-width: $tablet) {
+      width: 51%;
+    }
+    @media screen and (min-width: $desktop) {
+      width: 34%;
+    }
+  }
+  &__right-cell {
+    @media screen and (min-width: $tablet) {
+      width: 49%;
+    }
+    @media screen and (min-width: $desktop) {
+      width: 66%;
+    }
+  }
+}

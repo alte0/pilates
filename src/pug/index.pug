@@ -1,12 +1,12 @@
 extends template-pug/layout
 //- не забыть про отступ
 block head
-  - var pageTitle = 'Студия Пилатеса';
+  - var pageTitle = 'Студия Пилатеса'
+  - var content='Студия Пилатеса'
 block header
 
 block content
   - var menu = ["О пилатесе", "Расписание и стоимость", "Как прохоят занятия", "Отзывы", "Контакты"]
-  meta(name='author' content='Студия Пилатеса')
 
   main(id='full-page')
     section.section(data-tooltip="")
