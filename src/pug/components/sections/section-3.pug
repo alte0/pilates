@@ -1,0 +1,15 @@
++b.schedule-cost
+
+  - var cards = [{level: "Новичек", price: "150", times: {"time-1": {start: "9:00", end: "10:00"}, "time-2": {start: "9:00", end: "10:00"}, "time-3": {start: "9:00", end: "10:00"}}},{level: "Профи", price: "200", times: {"time-1": {start: "18:00", end: "19:30"}, "time-2": {start: "18:00", end: "19:30"}, "time-3": {start: "18:00", end: "19:30"}}},{level: "Мастер", price: "350", times: {"time-1": {start: "20:00", end: "21:30"}, "time-2": {start: "20:00", end: "21:30"}, "time-3": {start: "20:00", end: "21:30"}}}];
+
+  each item in cards
+    +b.card
+      +e.H3.level
+        +e.SPAN.small-text Уровень
+        br
+        = ' '+item.level
+      +e.SPAN.price= item.price+" руб. / занятие"
+      +e.SPAN.time= 'пн ' + item.times["time-1"].start + ' — ' + item.times["time-1"].end
+      +e.SPAN.time= 'ср ' + item.times["time-2"].start + ' — ' + item.times["time-2"].end
+      +e.SPAN.time= 'пт ' + item.times["time-3"].start + ' — ' + item.times["time-3"].end
+      +e.A.record(href="") Записаться

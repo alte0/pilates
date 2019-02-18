@@ -1,0 +1,9 @@
+.schedule-cost {
+  counter-reset: num;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-direction: row;
+    padding-top: 5px;
+  }
+  // @media screen and (min-width: $desktop) {}
+}

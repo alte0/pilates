@@ -3,6 +3,9 @@
     display: flex;
     flex-direction: row;
   }
+  @media screen and (min-width: $tablet) and (max-width: $desktop-down) {
+    margin-bottom: 53px;
+  }
   &__left-cell {
     @media screen and (min-width: $tablet) {
       width: 51%;

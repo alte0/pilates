@@ -95,3 +95,17 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url($fontsPath+'ProximaNova-Extrabld.eot');
+  src: local('Proxima Nova Extrabold'), local('ProximaNova-Extrabld'),
+      url($fontsPath+'ProximaNova-Extrabld.eot?#iefix') format('embedded-opentype'),
+      url($fontsPath+'ProximaNova-Extrabld.woff2') format('woff2'),
+      url($fontsPath+'ProximaNova-Extrabld.woff') format('woff'),
+      url($fontsPath+'ProximaNova-Extrabld.ttf') format('truetype'),
+      url($fontsPath+'ProximaNova-Extrabld.svg#ProximaNova-Extrabld') format('svg');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}

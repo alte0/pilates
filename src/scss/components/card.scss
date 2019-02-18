@@ -1,0 +1,142 @@
+.card {
+  border-radius: 4px;
+  position: relative;
+  // padding: 44px;
+  // padding-top: 93px;
+  // padding-bottom: 42px;
+  padding: 93px 44px 42px 44px;
+  color: white;
+  margin-bottom: 20px;
+  @media screen and (max-width: $tablet-down) {
+    margin-left: 22px;
+    margin-right: 22px;
+  }
+  @media screen and (min-width: $tablet) {
+    padding-left: 30px;
+    padding-right: 20px;
+    padding-bottom: 39px;
+    width: 33.33%;
+  }
+  @media screen and (min-width: $tablet) and (max-width: $desktop-down) {
+    margin-bottom: 55px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding: 171px 70px 95px 70px;
+  }
+  &:nth-child(1) {
+    background-color: transparentize($green, 0.5);
+  }
+  &:nth-child(2) {
+    background-color: transparentize($green, 0.3);
+  }
+  &:nth-child(3) {
+    background-color: transparentize($green, 0.1);
+  }
+  &::before {
+    counter-increment: num;
+    content: '0'counter(num);
+    position: absolute;
+    top: 13px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    font-size: 115px;
+    font-family: $ProximaNovaFont;
+    font-weight: 800;
+    opacity: .1;
+    @media screen and (min-width: $desktop) {
+      font-size: 210px;
+    }
+  }
+  &:not(:last-child) {
+    @media screen and (min-width: $tablet) {
+      margin-right: 10px;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-right: 20px;
+    }
+  }
+
+  &__small-text {
+    font-size: 12px;
+  }
+  &__level {
+    font-family: $robotoFont;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.2em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    @media screen and (min-width: $desktop) {
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+  }
+  &__price {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    @media screen and (min-width: $desktop) {
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+  }
+  &__time {
+    font-size: 16px;
+    line-height: 23px;
+    margin-bottom: 8px;
+    @media screen and (min-width: $desktop) {
+      font-size: 18.5px;
+      line-height: 36px;
+      margin-bottom: 0px;
+    }
+  }
+  &__price,
+  &__time {
+    display: block;
+  }
+  &__record {
+    border: 2px solid white;
+    border-radius: 20px;
+    color: inherit;
+    display: inline-block;
+    padding: 4px 25px;
+    margin-top: 22px;
+    position: relative;
+    &:not(:hover) {
+      text-decoration: none;
+    }
+    @media screen and (min-width: $tablet) {
+      padding: 4px 15px;
+    }
+    @media screen and (min-width: $desktop) {
+      border-radius: 25px;
+      font-size: 18.5px;
+      margin-top: 35px;
+      padding: 14px 63px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      right: -24px;
+      width: 36px;
+      height: 6px;
+      transition: background-position linear .025s;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: 0 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 73.8 28.1'%3E%3Cpath fill='%23fff' stroke='%23fff' d='M-.4 5.6h68.6v2H-.4z'/%3E%3Cpath fill='none' stroke='%23fff' stroke-width='2' d='M65.1.6l6.6 6-6.6 6'/%3E%3Cpath stroke='%23000' d='M.1 20.3h68.6v2H.1z'/%3E%3Cpath fill='none' stroke='%23000' stroke-width='2' d='M65.6 15.3l6.6 6-6.6 6'/%3E%3C/svg%3E");
+      @media screen and (min-width: $tablet) {}
+      @media screen and (min-width: $desktop) {
+        right: -40px;
+        width: 72px;
+        height: 12px;
+      }
+    }
+  }
+}
